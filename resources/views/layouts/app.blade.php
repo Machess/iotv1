@@ -8,7 +8,6 @@
 </head>
 <body>
 @include('layouts.partial.nav-bar')
-@include('layouts.partial.side-nav')
 <div class="container">
     @yield('content')
 </div>
