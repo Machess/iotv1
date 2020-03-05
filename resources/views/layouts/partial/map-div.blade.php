@@ -5,10 +5,10 @@
     }
     #mapid {
         height: 100%;
-        width: 500px;
+        width: 1250px;
     }
 </style>
-<div id="sectionB">
+<div>
     <div class="container-fluid" id="mapid" style="float:right"></div>
 </div>
 
