@@ -1,17 +1,12 @@
 <style>
-    .column {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-    }
+
     #mapid {
-        height: 1000px;
-        width: 1000px;
+        height: 500px;
+        width: 500px;
     }
 </style>
-<div class="column">
-    <div id="mapid"></div>
+<div id="sectionB">
+    <div id="mapid" style="float:right"></div>
 </div>
 
 
