@@ -5,14 +5,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/kaart">Kaart</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link " href="/rapporten">Rapporten</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="/services">Services</a>
+                <a class="nav-link " href="/brandstof">Brandstof</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/plannig">Planning</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/instellingen">Instellingen</a>
             </li>
         </ul>
     </div>
