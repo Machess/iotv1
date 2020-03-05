@@ -21,7 +21,7 @@
         crossorigin="">
 </script>
 <script>
-    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    var mymap = L.map('mapid').setView([51.9973514,4.4294701,13], 13);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -30,6 +30,7 @@
         tileSize: 512,
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoibWFjaGVzcyIsImEiOiJjazdmMXRsZXgwOHN4M3dxbmE3d2Vmd3NiIn0.ZBBdjBAepRRIltG422ejzg'
+
     }).addTo(mymap);
 </script>
 </body>
