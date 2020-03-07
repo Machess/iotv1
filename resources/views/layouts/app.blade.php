@@ -11,16 +11,36 @@
 </head>
 <body>
 @include('layouts.partial.nav-bar')
-    <div class="row">
-    @yield('content')
+    <div class="flex-row">
+        <div class="flex-column">
+            @yield('content-left')
+        </div>
+        <div class="flex-column">
+            @yield('content-right')
+        </div>
     </div>
+@yield('content-bottom')
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin="">
 </script>
 <script>
     var mymap = L.map('mapid').setView([51.9973514,4.4294701,13], 13);
+    var popup = L.popup();
+    var geojsonFeature = {
+        "type": "Feature",
+        "properties": {
+            "name": "Regent office",
+            "amenity": "Office",
+            "popupContent": "This is where the Regents work"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.989728, 4.475663]
+        }
+    };
 
+    L.geoJSON(geojsonFeature).addTo(mymap);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
@@ -30,6 +50,18 @@
         accessToken: 'pk.eyJ1IjoibWFjaGVzcyIsImEiOiJjazdmMXRsZXgwOHN4M3dxbmE3d2Vmd3NiIn0.ZBBdjBAepRRIltG422ejzg'
 
     }).addTo(mymap);
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("You clicked the map at " + e.latlng.toString())
+            .openOn(mymap);
+    }
+    mymap.on('click', onMapClick);
+
+
+
+
 </script>
 </body>
 </html>

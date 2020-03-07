@@ -5,7 +5,7 @@
     }
     #mapid {
         height: 800px;
-        width: 1200px;
+        width: 1500px;
     }
 </style>
 <div>
