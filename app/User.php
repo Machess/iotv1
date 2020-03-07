@@ -8,6 +8,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    protected $table ='users';
+
+    public $primaryKey = 'id';
+
+    public $timestamps = true;
     use Notifiable;
 
     /**

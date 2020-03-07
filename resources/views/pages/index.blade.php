@@ -1,6 +1,10 @@
 @extends('layouts.app')
-@section('content')
+@section('content-left')
     @include('layouts.partial.left-table')
+@endsection
+@section('content-right')
     @include('layouts.partial.map-div')
-    @include('layouts.partial.bottom-table')
+@endsection
+@section('content-bottom')
+@include('layouts.partial.bottom-table')
 @endsection
