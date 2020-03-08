@@ -1,4 +1,4 @@
-<div style="width: 100%; float:left">
+<div style="width: 58%; float:right">
     <button onclick="toggleTable()" style="width: 100%">Bottom table</button>
 
     <div id="table-bottom-toggle">
