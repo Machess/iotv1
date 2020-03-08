@@ -7,28 +7,22 @@
     <div class="content">
         <table class="table">
             <thead>
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-            </tr>
-            <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-            </tr>
-            <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
-            </tr>
+            @if(count($users) > 0)
+                @foreach($users as $user)
+                    <tr>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->email}}</td>
+                    </tr>
+                @endforeach
+            @else
+                <p> No users</p>
+            @endif
             </tbody>
         </table>
         </div>

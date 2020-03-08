@@ -4,8 +4,8 @@
         width: 100%;
     }
     #mapid {
-        height: 800px;
-        width: 1500px;
+        height: 600px;
+        width: 1100px;
     }
 </style>
 <div>
