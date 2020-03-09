@@ -17,12 +17,9 @@ class UserController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-  /*      $fleet_id = Fleet::GET('id');
-        $fleet = Fleet::find($fleet_id)*/;
         return view('pages.index')
             ->with('fleets',$user->fleets)
-            ->with('users',$user)
-            /*->with('fleets',$fleet->trackers)*/;
+            ->with('users',$user);
     }
 
     /**
