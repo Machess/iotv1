@@ -1,42 +1,55 @@
 <div style="width: 40%; height: 100%; float:left; margin-left:10px"; >
     <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 1</button>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>{{$users->name}}</td>
+                            <td>{{$users->email}}</td>
+                        </tr>
+                </tbody>
+            </table>
         </div>
             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 2</button>
     <div class="content">
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Brand</th>
                 </tr>
             </thead>
             <tbody>
-            @if(count($users) > 0)
-                @foreach($users as $user)
+            @if(count($fleets) > 0)
+                @foreach($fleets as $fleet)
                     <tr>
-                        <td>{{$user->name}}</td>
-                        <td>{{$user->email}}</td>
+                        <td>{{$fleet->type}}</td>
+                        <td>{{$fleet->brand}}</td>
                     </tr>
                 @endforeach
             @else
-                <p> No users</p>
+                <p> No assigned fleet</p>
             @endif
             </tbody>
         </table>
         </div>
             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 3</button>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         </div>
+            <p>Here tracker data wil come based on which machine you choose</p>
+        </div>
              <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 4</button>
+            <p>Data sums , total Kilometers, total amount of fuel useds</p>
         <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 5</button>
         <div class="content">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Extra information etc..</p>
         </div>
 </div>
 

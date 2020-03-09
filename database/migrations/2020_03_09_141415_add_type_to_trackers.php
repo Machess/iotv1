@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrackersTable extends Migration
+class AddTypeToTrackers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateTrackersTable extends Migration
      */
     public function up()
     {
-        Schema::create('trackers', function (Blueprint $table) {
-            $table->id();
-            $table->string('speed');
-            $table->string('fuel');
-            $table->timestamps();
+        Schema::table('trackers', function (Blueprint $table) {
+            $table->string('type');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateTrackersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trackers');
+        Schema::table('trackers', function (Blueprint $table) {
+            $table->dropColumn('type');
+        });
     }
 }

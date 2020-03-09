@@ -15,6 +15,8 @@ class CreateFleetsTable extends Migration
     {
         Schema::create('fleets', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
+            $table->string('brand');
             $table->timestamps();
         });
     }
