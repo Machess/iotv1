@@ -9,6 +9,3 @@
 @section('content-right')
     @include('layouts.partial.map-div')
 @endsection
-@section('content-bottom')
-    @include('layouts.partial.bottom-table')
-@endsection

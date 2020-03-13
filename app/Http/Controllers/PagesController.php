@@ -25,14 +25,14 @@ class PagesController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('pages.dashboard')
+        return view('pages.about')
             ->with('users',$user);
 
     }
 
     public function fleet()
     {
-
+        return view('pages.fleet');
 
     }
 

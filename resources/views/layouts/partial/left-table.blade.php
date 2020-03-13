@@ -1,4 +1,4 @@
-<div style="width: 40%; height: 100%; float:left; margin-left:10px"; >
+<div class="left-table">
     <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">User</button>
         <div class="content">
             <table class="table">
