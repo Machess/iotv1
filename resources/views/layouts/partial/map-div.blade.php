@@ -1,11 +1,7 @@
 <style>
-    html, body {
-        height: 100%;
-        width: 100%;
-    }
-    #mapid {
-        height: 600px;
-        width: 1100px;
+      #mapid {
+        height: 500px;
+        width: 900px;
     }
 </style>
 <div>

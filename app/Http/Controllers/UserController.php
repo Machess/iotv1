@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-Use App\Fleet;
+
 
 class UserController extends Controller
 {
@@ -15,9 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
+
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('pages.index')
+        return view('/')
             ->with('fleets',$user->fleets)
             ->with('users',$user);
     }

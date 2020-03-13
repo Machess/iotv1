@@ -1,5 +1,5 @@
 <div style="width: 40%; height: 100%; float:left; margin-left:10px"; >
-    <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 1</button>
+    <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">User</button>
         <div class="content">
             <table class="table">
                 <thead>
@@ -16,40 +16,36 @@
                 </tbody>
             </table>
         </div>
-            <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 2</button>
-    <div class="content">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Brand</th>
-                </tr>
-            </thead>
-            <tbody>
-            @if(count($fleets) > 0)
-                @foreach($fleets as $fleet)
+    <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Fleet Info</button>
+        <div class="content">
+            <table class="table">
+                <thead>
                     <tr>
-                        <td>{{$fleet->type}}</td>
-                        <td>{{$fleet->brand}}</td>
+                        <th>Type</th>
+                        <th>Brand</th>
                     </tr>
-                @endforeach
-            @else
-                <p> No assigned fleet</p>
-            @endif
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                @if(count($fleets) > 0)
+                    @foreach($fleets as $fleet)
+                        <tr>
+                            <td>{{$fleet->type}}</td>
+                            <td>{{$fleet->brand}}</td>
+                        </tr>
+                    @endforeach
+                @else
+                    <p> No assigned fleet</p>
+                @endif
+                </tbody>
+            </table>
         </div>
-            <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 3</button>
+            <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Tracker</button>
         <div class="content">
-            <p>Here tracker data wil come based on which machine you choose</p>
+            <p>Tracker data based on which machine you choose</p>
         </div>
-             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 4</button>
-            <p>Data sums , total Kilometers, total amount of fuel useds</p>
+             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Data aggregation</button>
+            <p>Data sums , total kilometers, total amount of fuel used</p>
         <div class="content">
-        </div>
-            <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Open Section 5</button>
-        <div class="content">
-            <p>Extra information etc..</p>
         </div>
 </div>
 
