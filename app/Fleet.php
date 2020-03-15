@@ -16,8 +16,6 @@ class Fleet extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function fleets(){
-        return $this->hasMany('App\Tracker');
-    }
+
 
 }

@@ -15,8 +15,6 @@
             <li class="nav-item">
                 <a class="nav-link " href="/fleet">Edit Fleet</a>
             </li>
-                <a class="nav-link " href="/settings">Settings</a>
-            </li>
         </ul>
 
 <!-- Authentication Links -->

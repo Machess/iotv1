@@ -32,7 +32,7 @@ class PagesController extends Controller
 
     public function fleet()
     {
-        return view('pages.fleet');
+        return view('fleets.index');
 
     }
 
