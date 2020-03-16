@@ -17,7 +17,7 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/about', 'PagesController@about');
 
-Route::get('/fleet', 'FleetsController@index');
+Route::get('/fleets', 'FleetsController@index');
 
 Route::get('/dashboard', 'PagesController@dashboard');
 
