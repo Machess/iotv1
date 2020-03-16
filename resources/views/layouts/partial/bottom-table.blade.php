@@ -1,7 +1,5 @@
 <div style="width: 100%; float:left">
-    <button onclick="toggleTable()" style="width: 100%">Bottom table</button>
-
-    <div id="table-bottom-toggle">
+      <div id="table-bottom-toggle" style="width: 50%; margin: 2%">
         <table class="table">
             <tr>
                 <th>Company</th>
