@@ -30,19 +30,5 @@ class PagesController extends Controller
 
     }
 
-    public function fleet()
-    {
-        $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('fleets.index')
-            ->with('fleets',$user->fleets)
-            ->with('users',$user);
 
-    }
-
-    public function settings()
-    {
-
-
-    }
 }
