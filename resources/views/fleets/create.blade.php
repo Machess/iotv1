@@ -14,7 +14,7 @@
 
     <div class="form-group">
         {{Form::label('brand', 'Brand')}}
-        {{Form::text('brand', 'test', ['class' => 'form-control','placeholder' => "Brand of vehicle"])}}
+        {{Form::text('brand', '', ['class' => 'form-control','placeholder' => "Brand of vehicle"])}}
     </div>
     {{Form::submit('Add to fleet', ['class' => 'btn btn-primary'] ) }}
     {{ Form::close() }}
