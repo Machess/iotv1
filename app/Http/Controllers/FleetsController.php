@@ -99,6 +99,9 @@ class FleetsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $fleet = Fleet::find($id);
+        $fleet->delete();
+
+        return redirect('/dashboard')->with('success', 'Deleted from fleet');
     }
 }
