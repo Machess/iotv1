@@ -27,6 +27,7 @@
 </head>
 <body>
     @yield('nav-bar')
+    @include('layouts.partial.messages')
         <div class="flex-row">
             <div class="flex-column">
                 @yield('content-left')

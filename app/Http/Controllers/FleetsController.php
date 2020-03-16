@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+Use App\Fleet;
+Use Illuminate\Support\Facades\Auth;
 
 class FleetsController extends Controller
 {
@@ -39,7 +41,20 @@ class FleetsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'type' => 'required',
+            'brand' => 'required'
+        ]);
+
+        //Create fleet item
+        $fleet = new Fleet;
+        $fleet->type =$request->input('type');
+        $fleet->brand =$request->input('brand');
+        $fleet->user_id = Auth::user()->id;
+        $fleet->save();
+
+        return redirect('/dashboard')->with('success','Added to fleet');
+
     }
 
     /**
