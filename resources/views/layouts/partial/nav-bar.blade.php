@@ -13,7 +13,7 @@
                 <a class="nav-link" href="/about">About User</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="/fleet">Edit Fleet</a>
+                <a class="nav-link " href="/fleet">Fleet</a>
             </li>
         </ul>
 

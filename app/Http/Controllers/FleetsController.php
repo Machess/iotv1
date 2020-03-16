@@ -13,7 +13,7 @@ class FleetsController extends Controller
      */
     public function index()
     {
-        return view('fleets.index');
+
     }
 
     /**

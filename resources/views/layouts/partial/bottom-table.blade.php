@@ -13,17 +13,4 @@
             </tr>
         </table>
     </div>
-
 </div>
-
-<script>
-    function toggleTable() {
-        var x = document.getElementById("table-bottom-toggle");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
-
