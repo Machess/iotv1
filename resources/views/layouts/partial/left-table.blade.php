@@ -19,14 +19,14 @@
     <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Fleet Info</button>
         <div class="content">
             <table class="table">
-                <thead>
+                @if(count($fleets) > 0)
+                    <thead>
                     <tr>
                         <th>Type</th>
                         <th>Brand</th>
                     </tr>
-                </thead>
-                <tbody>
-                @if(count($fleets) > 0)
+                    </thead>
+                    <tbody>
                     @foreach($fleets as $fleet)
                         <tr>
                             <td>{{$fleet->type}}</td>
@@ -34,7 +34,7 @@
                         </tr>
                     @endforeach
                 @else
-                    <p> No assigned fleet</p>
+                    <p class="text-danger"> No vehicles in your fleet <a href="/fleets/create" class="btn btn-primary"> Add to fleet</a>
                 @endif
                 </tbody>
             </table>
