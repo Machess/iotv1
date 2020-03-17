@@ -1,6 +1,4 @@
-<div class="left-table">
     <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">User</button>
-        <div class="content">
             <table class="table">
                 <thead>
                 <tr>
@@ -15,9 +13,7 @@
                         </tr>
                 </tbody>
             </table>
-        </div>
     <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Fleet Info</button>
-        <div class="content">
             <table class="table">
                 @if(count($fleets) > 0)
                     <thead>
@@ -38,16 +34,12 @@
                 @endif
                 </tbody>
             </table>
-        </div>
             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Tracker</button>
-        <div class="content">
             <p>Tracker data based on which machine you choose</p>
-        </div>
              <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Data aggregation</button>
             <p>Data sums , total kilometers, total amount of fuel used</p>
-        <div class="content">
-        </div>
-</div>
+
+
 
 <script>
     var coll = document.getElementsByClassName("collapsible");

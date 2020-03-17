@@ -27,18 +27,19 @@
 </head>
 <body>
     @yield('nav-bar')
+    <div class="container-fluid">
     @include('layouts.partial.messages')
-        <div class="flex-row">
-            <div class="flex-column">
+        <div class="row">
+            <div class="col-lg-4">
                 @yield('content-left')
             </div>
-            <div class="flex-column">
+            <div class="col-lg-8">
                 @yield('content-right')
             </div>
         </div>
     @yield('content-bottom')
     @yield('content')
-
+    </div>
     <script>
         var mymap = L.map('mapid').setView([51.9973514,4.4294701,13], 13);
         var popup = L.popup();
