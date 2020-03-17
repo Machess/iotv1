@@ -25,15 +25,15 @@
     <title>{{config('app.name', 'Test')}}</title>
 
 </head>
-<body>
+<body style="background:#F7F7F9">
     @yield('nav-bar')
     <div class="container-fluid">
     @include('layouts.partial.messages')
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="padding-left: 0px; padding-right: 0px; padding-top: 2px; background: #F7F7F9">
                 @yield('content-left')
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8" style="background: #F7F7F9">
                 @yield('content-right')
             </div>
         </div>

@@ -1,19 +1,22 @@
-    <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">User</button>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                            <td>{{$users->name}}</td>
-                            <td>{{$users->email}}</td>
-                        </tr>
-                </tbody>
-            </table>
-    <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Fleet Info</button>
+    <button type="button" class="collapsible btn-outline-dark" style="width:100%; height:6%">User</button>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{$users->name}}</td>
+                <td>{{$users->email}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="collapsible btn-outline-dark" style="width:100%; height:6%">Fleet Info</button>
+        <div>
             <table class="table">
                 @if(count($fleets) > 0)
                     <thead>
@@ -30,14 +33,23 @@
                         </tr>
                     @endforeach
                 @else
-                    <p class="text-danger"> No vehicles in your fleet <a href="/fleets/create" class="btn btn-primary"> Add to fleet</a>
+                    <div>
+                        <p class="text-danger"> No vehicles in your fleet <a href="/fleets/create" class="btn btn-outline-primary btn-sm" style="float: right"> Add to fleet</a>
+                    </div>
                 @endif
                 </tbody>
             </table>
-            <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Tracker</button>
-            <p>Tracker data based on which machine you choose</p>
-             <button type="button" class="collapsible btn btn-info" style="width:100%; height:10%">Data aggregation</button>
-            <p>Data sums , total kilometers, total amount of fuel used</p>
+        </div>
+    <button type="button" class="collapsible btn-outline-dark" style="width:100%; height:6%">Tracker</button>
+           <div>
+               <p>Tracker data based on which machine you choose</p>
+           </div>
+
+    <button type="button" class="collapsible btn-outline-dark" style="width:100%; height:6%">Data aggregation</button>
+            <div>
+                <p>Data sums , total kilometers, total amount of fuel used</p>
+            </div>
+
 
 
 
